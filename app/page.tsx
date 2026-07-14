@@ -557,6 +557,26 @@ export default function Page() {
   const brainScale = Number(answers.brainSize || 50);
   const cactusScale = Number(answers.genieSize || 4);
   const showCactusWarning = cactusScale > 6;
+// inside Page() function
+const handleFinalSubmit = async () => {
+  try {
+    const res = await fetch('/api/send-response', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ answers }),
+    });
+
+    if (!res.ok) {
+      alert('Submission failed. Please try again.');
+      return;
+    }
+
+    window.open('https://instagram.com/', '_blank');
+  } 
+  catch {
+  alert('Something went wrong.');
+}
+};
 
   return (
     <main style={styles.page}>
@@ -680,7 +700,9 @@ export default function Page() {
             <p style={{ ...styles.text, whiteSpace: 'pre-line' }}>{current.subtitle}</p>
             <div style={{ fontSize: 90, textAlign: 'center', marginBottom: 10 }}>🐶</div>
             <a href={current.href} target="_blank" rel="noreferrer" style={styles.linkWrap}>
-              <button style={styles.ctaBtn}>{current.cta}</button>
+              <button style={styles.ctaBtn} onClick={handleFinalSubmit}>
+  {current.cta}
+</button>
             </a>
           </>
         )}
@@ -788,4 +810,5 @@ const styles: Record<string, React.CSSProperties> = {
     boxShadow: '0 12px 28px rgba(43,134,197,0.45)',
   },
   linkWrap: { textDecoration: 'none' },
+  
 };

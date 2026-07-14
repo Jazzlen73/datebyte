@@ -1,15 +1,4 @@
-# DateByte - A Techie Way to Ask Her Out 💻💘
 
-<div align="left">
-
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/tharushkadinujaya05/datebyte)
-![GitHub all releases](https://img.shields.io/github/downloads/tharushkadinujaya05/obsiai/datebyte)
-![GitHub](https://img.shields.io/github/license/tharushkadinujaya05/datebyte)
-![Screen Recording Nov 17 2024](https://github.com/user-attachments/assets/707f67f6-c38a-41ae-99e8-c34cfbede8fd)
-
-
-Are you a tech guy? Want to ask her out in a way she’ll never forget? DateByte lets you send the cutest, tech-inspired date invite—because who says coding can’t be romantic? 🤨
-</div>
 
 ## 📑 Table of Contents
 
